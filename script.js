@@ -215,3 +215,40 @@ slider();
 document.addEventListener('DOMContentLoaded', function (e) {
   console.log('HTML loaded', e);
 });
+
+// API
+
+const apiKey = 'YyTBCufccbsKgZpyG5x1i2zw0vmNgBsgEp6Jgnf6'; // Replace with your actual NASA API key
+const searchButton = document.getElementById('searchButton');
+const dateInput = document.getElementById('dateInput');
+const apodContainer = document.querySelector('.apod-container');
+
+searchButton.addEventListener('click', () => {
+  const date = dateInput.value;
+  if (date) {
+    fetchAPOD(date);
+  }
+});
+
+async function fetchAPOD(date) {
+  const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${date}`;
+
+  try {
+    const response = await fetch(apiUrl);
+    if (!response.ok) {
+      throw new Error('Request failed');
+    }
+    const data = await response.json();
+    displayAPOD(data);
+  } catch (error) {
+    console.error('An error occurred:', error);
+  }
+}
+
+function displayAPOD(apodData) {
+  apodContainer.innerHTML = `
+    <h2 class="apod-title">${apodData.title}</h2>
+    <p>${apodData.explanation}</p>
+    <img class="apod-image" src="${apodData.url}" alt="${apodData.title}">
+  `;
+}
