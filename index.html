@@ -23,13 +23,16 @@
       <nav class="nav">
         <ul class="nav__links">
           <li class="nav__item">
-            <a class="nav__link" href="#section--1">Features</a>
+            <a class="nav__link" href="#section--1">Facts</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#section--2">Operations</a>
+            <a class="nav__link" href="#section--2">Moments</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#section--3">Testimonials</a>
+            <a class="nav__link" href="#section-sign-up">NASA-APOD</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#section--3">Quotes</a>
           </li>
           <li class="nav__item">
             <a class="nav__link nav__link--btn btn--show-modal" href="#"
@@ -41,8 +44,8 @@
 
       <div class="header__title">
         <h1>
-          Discover, Roam, Adventure,<br />
-          Explore.
+          Venture into the Cosmos<br />
+          With Knowledge!
         </h1>
         <h4>Discover The Wonder That Is Our Universe!</h4>
         <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
@@ -124,9 +127,9 @@
 
     <section class="section" id="section--2">
       <div class="section__title">
-        <h2 class="section__description" style="color: #fff">Operations</h2>
+        <h2 class="section__description" style="color: #fff">Moments</h2>
         <h3 class="section__header" style="color: #fff">
-          Here's how it works...
+          Historical Moments In Space History
         </h3>
       </div>
 
@@ -136,92 +139,132 @@
             class="btn operations__tab operations__tab--1 operations__tab--active"
             data-tab="1"
           >
-            <span>01</span>Search
+            <span>01</span>Moon Landing
           </button>
           <button class="btn operations__tab operations__tab--2" data-tab="2">
-            <span>02</span>Locate
+            <span>02</span>The ISS
           </button>
           <button class="btn operations__tab operations__tab--3" data-tab="3">
-            <span>03</span>Embark
+            <span>03</span>Space Jump
           </button>
         </div>
         <div
           class="operations__content operations__content--1 operations__content--active"
         >
           <div class="operations__icon operations__icon--1">
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-moon" style="font-size: 26px"></i>
           </div>
-          <h5 class="operations__header">Find Your Outdoors!</h5>
+          <h5 class="operations__header">The Apollo 11 Mission!</h5>
           <p>
-            Locate the search bar below and enter relevant keywords related to
-            the trail you want to find. Review the search results and click on a
-            trail for more details.
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/nOcDftgR5UQ"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe
+            ><br />
+            One giant leap for mankind. On July 20, 1969 Americans Neil
+            Armstrong and Edwin Aldrin, Jr. make the first manned soft landing
+            on the Moon, and the first moonwalk, using Apollo 11.
           </p>
         </div>
 
         <div class="operations__content operations__content--2">
           <div class="operations__icon operations__icon--2">
-            <i class="fa-solid fa-location-dot"></i>
+            <i class="fa-solid fa-rocket" style="font-size: 26px"></i>
           </div>
-          <h5 class="operations__header">Location, Location, Location!</h5>
+          <h5 class="operations__header">The International Space Station!</h5>
+
           <p>
-            Once you've selected the ideal trail for you, utilize the built-in
-            map to find its location and the quickest route.
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/06-Xm3_Ze1o"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <br />
+            The first component of the International Space Station, Zarya, is
+            launched on a Russian rocket on November 20, 1998. This vaery same
+            station orbits earth today!
           </p>
         </div>
         <div class="operations__content operations__content--3">
           <div class="operations__icon operations__icon--3">
-            <i class="fa-regular fa-compass"></i>
+            <i class="fa-solid fa-user-astronaut" style="font-size: 26px"></i>
           </div>
-          <h5 class="operations__header">Your Journey Awaits!</h5>
+          <h5 class="operations__header">Jumping From Space!</h5>
           <p>
-            You're all set to embark on a thrilling adventure that promises to
-            be unforgettable! Gather everything you need, fuel your excitement,
-            and get ready to immerse yourself in a unique and enriching
-            experience.
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/E9oKEJ1pXPw"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <br />
+            In 2012 Felix Baumgartner set the World Record for skydiving from a
+            height of 24 miles. The freefall lasted over four minutes and Felix
+            broke the speed of sound.
           </p>
         </div>
       </div>
     </section>
-    <section class="section section--sign-up">
+    <section class="section section--sign-up" id="section-sign-up">
       <div class="section__title">
         <h3 class="section__header">NASA Astronomy Picture of the Day</h3>
       </div>
 
       <div class="search-container">
-        <label for="dateInput">Enter a date (YYYY-MM-DD):</label>
+        <label class="date-input-label" for="dateInput"
+          >Enter a date (YYYY-MM-DD):</label
+        >
         <input type="text" id="dateInput" placeholder="YYYY-MM-DD" />
         <button id="searchButton">Search</button>
       </div>
-      <div class="apod-container">
-        <!-- APOD content will be displayed here -->
-      </div>
+      <div class="apod-container"></div>
     </section>
 
     <section class="section" id="section--3">
       <div class="section__title section__title--testimonials">
-        <h2 class="section__description">Not sure yet?</h2>
+        <h2 class="section__description">Quotes</h2>
         <h3 class="section__header">
-          Millions of Bankists are already making their lifes simpler.
+          Famous Quotes From Notable Astronamers and Leaders
         </h3>
       </div>
 
       <div class="slider">
         <div class="slide slide--1">
           <div class="testimonial">
-            <h5 class="testimonial__header">Best financial decision ever!</h5>
+            <h5 class="testimonial__header">
+              <em>Houston, We Have A Problem.</em>
+            </h5>
             <blockquote class="testimonial__text">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Accusantium quas quisquam non? Quas voluptate nulla minima
-              deleniti optio ullam nesciunt, numquam corporis et asperiores
-              laboriosam sunt, praesentium suscipit blanditiis. Necessitatibus
-              id alias reiciendis, perferendis facere pariatur dolore veniam
-              autem esse non voluptatem saepe provident nihil molestiae.
+              Often called the “successful failure”, the Apollo 13 mission is a
+              testament to NASA's commitment to bringing their astronauts back
+              home safely. After an oxygen tank failed two days into their
+              mission, the crew of Apollo 13 and Mission Control in Houston
+              improvised changes to the lunar module. With these modifications,
+              the crew was able to survive, under great hardship, until
+              splashdown in the ocean.
             </blockquote>
             <address class="testimonial__author">
-              <img src="img/user-1.jpg" alt="" class="testimonial__photo" />
-              <h6 class="testimonial__name">Aarav Lynn</h6>
-              <p class="testimonial__location">San Francisco, USA</p>
+              <img
+                src="img/jack-swigert-slefie.jpg"
+                alt=""
+                class="testimonial__photo"
+              />
+              <h6 class="testimonial__name">
+                Jack Swigert, American Astronaut
+              </h6>
+              <p class="testimonial__location">Denver, USA</p>
             </address>
           </div>
         </div>
@@ -229,19 +272,24 @@
         <div class="slide slide--2">
           <div class="testimonial">
             <h5 class="testimonial__header">
-              The last step to becoming a complete minimalist
+              <em>The Stars Don't Look Bigger, But They Do Look Brighter.</em>
             </h5>
             <blockquote class="testimonial__text">
-              Quisquam itaque deserunt ullam, quia ea repellendus provident,
-              ducimus neque ipsam modi voluptatibus doloremque, corrupti
-              laborum. Incidunt numquam perferendis veritatis neque repellendus.
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo
-              deserunt exercitationem deleniti.
+              In 1983, astronaut Sally Ride launched aboard space shuttle
+              Challenger and became the first American woman to go to space. Dr.
+              Sally Ride's flight made her a hero to generations of girls. After
+              retiring from the astronaut corp., she cofounded the Sally Ride
+              Science organization to encourage young girls to enter science,
+              math, technology and engineering fields.
             </blockquote>
             <address class="testimonial__author">
-              <img src="img/user-2.jpg" alt="" class="testimonial__photo" />
-              <h6 class="testimonial__name">Miyah Miles</h6>
-              <p class="testimonial__location">London, UK</p>
+              <img
+                src="img/sally-ride-selfie.jpg"
+                alt=""
+                class="testimonial__photo"
+              />
+              <h6 class="testimonial__name">Sally Ride, American Astronaut</h6>
+              <p class="testimonial__location">Los Angeles, USA</p>
             </address>
           </div>
         </div>
@@ -249,28 +297,29 @@
         <div class="slide slide--3">
           <div class="testimonial">
             <h5 class="testimonial__header">
-              Finally free from old-school banks
+              <em
+                >We believe that when men reach beyond this planet, they should
+                leave their national differences behind them.</em
+              >
             </h5>
             <blockquote class="testimonial__text">
-              Debitis, nihil sit minus suscipit magni aperiam vel tenetur
-              incidunt commodi architecto numquam omnis nulla autem,
-              necessitatibus blanditiis modi similique quidem. Odio aliquam
-              culpa dicta beatae quod maiores ipsa minus consequatur error sunt,
-              deleniti saepe aliquid quos inventore sequi. Necessitatibus id
-              alias reiciendis, perferendis facere.
+              John F. Kennedy made the statement in a speech he delivered on
+              September 12, 1962, at Rice University in Houston, Texas. This
+              speech is often referred to as the "We choose to go to the Moon"
+              speech. Kennedy's speech was a pivotal moment in the context of
+              the Cold War and the Space Race between the United States and the
+              Soviet Union.
             </blockquote>
             <address class="testimonial__author">
-              <img src="img/user-3.jpg" alt="" class="testimonial__photo" />
-              <h6 class="testimonial__name">Francisco Gomes</h6>
-              <p class="testimonial__location">Lisbon, Portugal</p>
+              <img src="img/JFK-selfie.jpg" alt="" class="testimonial__photo" />
+              <h6 class="testimonial__name">
+                John F Kennedy, 35th U.S President
+              </h6>
+              <p class="testimonial__location">Brookline, USA</p>
             </address>
           </div>
         </div>
 
-        <!-- <div class="slide"><img src="img/img-1.jpg" alt="Photo 1" /></div>
-        <div class="slide"><img src="img/img-2.jpg" alt="Photo 2" /></div>
-        <div class="slide"><img src="img/img-3.jpg" alt="Photo 3" /></div>
-        <div class="slide"><img src="img/img-4.jpg" alt="Photo 4" /></div> -->
         <button class="slider__btn slider__btn--left">&larr;</button>
         <button class="slider__btn slider__btn--right">&rarr;</button>
         <div class="dots"></div>
@@ -283,42 +332,31 @@
           <a class="footer__link" href="#">About</a>
         </li>
         <li class="footer__item">
-          <a class="footer__link" href="#">Pricing</a>
-        </li>
-        <li class="footer__item">
           <a class="footer__link" href="#">Terms of Use</a>
         </li>
         <li class="footer__item">
           <a class="footer__link" href="#">Privacy Policy</a>
         </li>
         <li class="footer__item">
-          <a class="footer__link" href="#">Careers</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#">Blog</a>
-        </li>
-        <li class="footer__item">
-          <a class="footer__link" href="#">Contact Us</a>
+          <a class="footer__link" href="#">Contact</a>
         </li>
       </ul>
-      <img src="img/icon.png" alt="Logo" class="footer__logo" />
+      <img src="img/Rocky-space.jpg" alt="Logo" class="footer__logo" />
       <p class="footer__copyright">
         &copy; Copyright by
         <a
           class="footer__link twitter-link"
           target="_blank"
-          href="https://twitter.com/jonasschmedtman"
-          >Jonas Schmedtmann</a
-        >. Use for learning or your portfolio. Don't use to teach. Don't claim
-        as your own product.
+          href="https://www.linkedin.com/in/owen-bond-795100236/"
+          >Owen Bond</a
+        >.
       </p>
     </footer>
 
     <div class="modal hidden">
       <button class="btn--close-modal">&times;</button>
       <h2 class="modal__header">
-        Open your bank account <br />
-        in just <span class="highlight">5 minutes</span>
+        Sign Up To Recieve Daily <span class="highlight">Space Facts!</span>
       </h2>
       <form class="modal__form">
         <label>First Name</label>
@@ -327,7 +365,7 @@
         <input type="text" />
         <label>Email Address</label>
         <input type="email" />
-        <button class="btn">Next step &rarr;</button>
+        <button class="btn" style="color: #fff">Sign Up &rarr;</button>
       </form>
     </div>
     <div class="overlay hidden"></div>

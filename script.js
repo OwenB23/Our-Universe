@@ -240,6 +240,7 @@ async function fetchAPOD(date) {
     }
     const data = await response.json();
     displayAPOD(data);
+    apodContainer.style.opacity = 1;
   } catch (error) {
     console.error('An error occurred:', error);
   }
@@ -248,7 +249,7 @@ async function fetchAPOD(date) {
 function displayAPOD(apodData) {
   apodContainer.innerHTML = `
     <h2 class="apod-title">${apodData.title}</h2>
-    <p>${apodData.explanation}</p>
+    <p class="apod-info">${apodData.explanation}</p>
     <img class="apod-image" src="${apodData.url}" alt="${apodData.title}">
   `;
 }
