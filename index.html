@@ -16,6 +16,7 @@
       src="https://kit.fontawesome.com/4b21962f8a.js"
       crossorigin="anonymous"
     ></script>
+    <script src="server.js"></script>
     <script defer src="script.js"></script>
   </head>
   <body>
@@ -358,13 +359,16 @@
       <h2 class="modal__header">
         Sign Up To Recieve Daily <span class="highlight">Space Facts!</span>
       </h2>
-      <form class="modal__form">
+      <form class="modal__form" action="/signup" method="POST">
         <label>First Name</label>
-        <input type="text" />
+        <input type="text" name="fname" />
+
         <label>Last Name</label>
-        <input type="text" />
+        <input type="text" name="lname" />
+
         <label>Email Address</label>
-        <input type="email" id="email" />
+        <input type="email" name="email" />
+
         <button class="btn-in-modal" style="color: #fff">Sign Up &rarr;</button>
       </form>
     </div>
