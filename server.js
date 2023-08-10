@@ -23,10 +23,6 @@ app.post('/signup', (req, res) => {
   const { fname, lname, email } = req.body;
   console.log('Received a signup request');
 
-  app.get('/', (req, res) => {
-    res.send('Welcome to the homepage!');
-  });
-
   const mailOptions = {
     from: 'Owenbond23@gmail.com',
     to: email,
@@ -43,6 +39,10 @@ app.post('/signup', (req, res) => {
       res.status(200).send('Sign-up successful!');
     }
   });
+});
+
+app.get('/', (req, res) => {
+  res.send('Welcome to the homepage!');
 });
 
 app.listen(PORT, () => {
