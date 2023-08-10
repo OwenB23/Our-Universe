@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
@@ -14,8 +14,8 @@ app.use(express.static('public'));
 const transporter = nodemailer.createTransport({
   service: 'Gmail',
   auth: {
-    user: 'Owenbond23@gmail.com', // Your Gmail email
-    pass: 'Hunter1343361!', // Your Gmail password or an app-specific password
+    user: 'Owenbond23@gmail.com',
+    pass: 'Hunter1343361!',
   },
 });
 
@@ -41,6 +41,6 @@ app.post('/signup', (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`Server is listening on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`Server is listening on port ${PORT}`);
 });
