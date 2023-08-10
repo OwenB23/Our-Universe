@@ -3,12 +3,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static('public'));
+
+app.use(express.static(__dirname));
 
 // Mailer
 const transporter = nodemailer.createTransport({
@@ -42,7 +44,7 @@ app.post('/signup', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.send('Welcome to the homepage!');
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(PORT, () => {
