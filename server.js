@@ -15,7 +15,8 @@ app.use(express.static(__dirname));
 // Mailer
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
-  secure: false,
+  port: 465,
+  secure: true,
   auth: {
     user: 'Owenbond23@gmail.com',
     pass: 'Hunter1343361!',
