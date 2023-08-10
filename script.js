@@ -8,6 +8,7 @@ const tabs = document.querySelectorAll('.operations__tab');
 const tabsContainer = document.querySelector('.operations__tab-container');
 const tabsContent = document.querySelectorAll('.operations__content');
 const nav = document.querySelector('.nav');
+const btnSignUp = document.querySelector('.btn-in-modal');
 
 ///////////////////////////////////////
 // Modal window
@@ -21,6 +22,28 @@ const closeModal = function () {
   modal.classList.add('hidden');
   overlay.classList.add('hidden');
 };
+
+const handleSignup = function (e) {
+  e.preventDefault();
+
+  const email = document.getElementById('email').value;
+
+  let signUpSuccessful = false;
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (email !== '' && email.match(emailRegex)) {
+    signUpSuccessful = true;
+    closeModal();
+  }
+
+  if (signUpSuccessful) {
+    alert('Thank You For Signing Up!');
+  } else {
+    alert('Invalid Credentials. Please provide a valid email.');
+  }
+};
+btnSignUp.addEventListener('click', handleSignup);
 
 btnsOpenModal.forEach(btn => btn.addEventListener('click', openModal));
 
