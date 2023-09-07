@@ -9,7 +9,6 @@
 <br/>
 
 ## Technologies Used
-### The "Our Universe" project leverages the following technologies to deliver an immersive and informative experience:
 ### JavaScript: JavaScript powers the interactivity and functionality of the website, allowing for dynamic content and user engagement.
 ### HTML and CSS: HTML and CSS are used to structure and style the website, providing an aesthetically pleasing and organized layout.
 ### Node.js: Node.js serves as the server-side runtime, enabling server-side logic and data handling.
